@@ -12,16 +12,6 @@
 	padding: 70px 0;
 }
 
-.produtos_item h2 {
-	font-size: 36px;
-	text-transform: uppercase;
-	color: #fff;
-	letter-spacing: 0.1em;
-	font-weight: bold;
-	position: relative;
-	top: -160px;
-	text-align: center;
-}
 
 .produtos_item h2 {
 	font-size: 36px;
@@ -82,13 +72,14 @@
 	font-weight: bold;
 }
 
+/* Parei em 5:27 */
 .produto_info ul li:nth-child(even) {
 	background: #fec63e;
 	text-transform: uppercase;
 	font-size: 18px;
 	line-height: 20px;
 	float: left;
-	width: 229px;
+	/* width: 229px; */
 	text-align: center;
 	margin-left: 2px;
 	height: 48px;
