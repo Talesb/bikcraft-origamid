@@ -423,3 +423,19 @@ img {
   [data-slide-nav] > button.active{
     background: #fec63e;
   }
+
+
+  .nao-aparece{
+      visibility: hidden;
+      height: 0px;
+      position: absolute;
+  }
+
+
+  #form-sucesso{
+    color: #31aa29;
+  }
+
+  #form-erro{
+      color: #f64540;
+}

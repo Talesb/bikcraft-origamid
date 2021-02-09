@@ -4,21 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikcraft - Contato </title>
+    <title>Bikcraft - Contato - 21 - 999999999 </title>
+
+    <meta name="description"
+        content="Compre a sua bicicleta personalizada na Bikcraft. Possuímos modelos Passeio, Retrô e Esporte.">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bikcraft - Contato - 21 - 999999999" />
+    <meta property="og:description" content="Compre sua bicicleta personalizada na bikcraft" />
+    <meta property="og:url" content="https://bikcraft.com" />
+    <meta property="og:image" content="https://bikcraft.com/img/og-image.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contato.css">
-     <link rel="stylesheet" href="css/responsivo.css">
-     <link rel="stylesheet" href="css/simple-anime.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/simple-anime.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <a href="index.html" class="grid-4">
-                <img src="img/bikcraft.svg">
+                <img src="img/bikcraft.svg" alt="Bikcraft - header">
             </a>
             <nav class="grid-12 header_menu">
                 <ul>
@@ -41,16 +57,23 @@
 
     <section class="contato container">
         <div class="">
-            <form action="" id="form_orcamento" class="contato_form grid-8">
+            <form method="POST" action="./enviar.php" id="form_orcamento" class="contato_form grid-8 formphp">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" name="nome" required>
                 <label for="email">E-mail</label>
-                <input type="text" id="email">
+                <input type="email" id="email" name="email" required>
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone">
-                <label for="espec">Especificações</label>
-                <textarea type="text" id="espec"></textarea>
-                <button type="submit" class="btn btn-preto">Enviar</button>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label class="nao-aparece">Se você não é um robô, deixe em branco</label>
+                <input type="text" class="nao-aparece" name="leaveblank">
+
+                <label class="nao-aparece">Se você não é um robô, não mude este campo</label>
+                <input type="text" class="nao-aparece" name="dontchange" value="http://">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea   id="mensagem" name="mensagem" required></textarea>
+                <button type="submit" id="enviar" name="enviar" class="btn btn-preto">Enviar</button>
             </form>
             <div class="contato_dados grid-8">
                 <h3>Dados</h3>
@@ -72,7 +95,7 @@
     </section>
 
     <section class="container contato_mapa">
-        <a  class="grid-16" href="https://google.com" target="_blank"><img src="img/endereco-bikcraft.jpg"
+        <a class="grid-16" href="https://google.com" target="_blank"><img src="img/endereco-bikcraft.jpg"
                 alt="Endereço da Bikcraft"></a>
     </section>
 
@@ -104,7 +127,6 @@
                         <li>contato@bikcraft.com</li>
                         <li>Botafogo - RJ</li>
                     </ul>
-                    </p>
                 </div>
 
                 <div class="grid-4 footer_redes">
@@ -117,7 +139,6 @@
                         <li><a href="https://mobile.twitter.com/login?lang=pt" target="_blank"><img
                                     src="img/redes-sociais/twitter.svg" alt="link twitter"></a></li>
                     </ul>
-                    </p>
                 </div>
 
             </div>
@@ -130,8 +151,10 @@
         </div>
     </footer>
 
+    <script src="./js/simple-anime.js"></script>
+    <script src="./js/simple-form.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
-<script src="./js/simple-anime.js"></script>
-<script src="./js/script.js"></script>
 
 </html>
